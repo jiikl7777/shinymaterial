@@ -94,7 +94,8 @@ material_page <- function(..., title = "", nav_bar_fixed = FALSE, nav_bar_color 
     shiny::tags$head(
       # Fonts
       shiny::includeCSS(
-        "https://fonts.googleapis.com/icon?family=Material+Icons"
+        system.file(paste0("materialize/", materialize_version, "/css/shinymaterial-icon.css"),
+                    package = "shinymaterial")
       ),
       # Source Materialize CSS
       shiny::includeCSS(
